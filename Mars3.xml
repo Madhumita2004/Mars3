@@ -1,8 +1,25 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="64" y="43">
-    <field name="MODE">UNTIL</field>
+  <block type="controls_repeat" id="50" inline="true" x="33" y="41">
+    <value name="TIMES">
+      <block type="math_number" id="57">
+        <field name="NUM">1</field>
+      </block>
+    </value>
     <statement name="DO">
-      <block type="movement_forward" id="24"></block>
+      <block type="movement_forward" id="17">
+        <next>
+          <block type="robot_delay" id="98" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="105">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_stop" id="130"></block>
+            </next>
+          </block>
+        </next>
+      </block>
     </statement>
   </block>
 </xml>
